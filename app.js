@@ -11,7 +11,9 @@ hbs.registerPartials(path.join(__dirname, "views/partials"));
 
 app.use(express.static(path.join(__dirname, "public")));
 
-
+hbs.registerHelper("formatearPrecio", (precio) => {
+    return precio.toLocaleString('es-CL');
+});
 
 let listProducts = [
             { id:1, nombre: "Landing Page", precio: 99990, destacado:false },

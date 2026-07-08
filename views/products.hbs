@@ -15,7 +15,7 @@
             {{#each productos}}
                 <article class="card">
                     <h2>{{nombre}}</h2>
-                    <p>Precio: ${{precio}}</p>
+                    <p>Precio: ${{formatearPrecio precio}}</p>
                     {{#if destacado}}
                     <strong>Producto Destacado</strong>
                     {{else}}

@@ -14,7 +14,7 @@
         <section class="grid">
             <article class="card">
                 <h2>{{producto.nombre}}</h2>
-                <p>Precio: ${{producto.precio}}</p>
+                <p>Precio: ${{formatearPrecio producto.precio}}</p>
                 {{#if producto.destacado}}
                 <strong>Producto Destacado</strong>
                 {{/if}}
