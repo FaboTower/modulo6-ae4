@@ -3,7 +3,7 @@ const hbs = require("hbs");
 const path = require("path");
 
 const app = express();
-const PORT = 3000;
+const PORT = 3001;
 
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "views"));
@@ -29,7 +29,7 @@ app.get("/",(req, res) => {
 app.get("/about",(req, res) => {
     res.render("about", {
         titulo: "Servicios Digitales",
-        usuario: "Fabián Torres"
+        usuario: "Fernando"
     });
 });
 
