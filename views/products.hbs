@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo con HBS</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    {{> navbar}}
+    <h1>{{titulo}}</h1>
+    <main>
+        <section class="grid">
+            {{#each productos}}
+                <article class="card">
+                    <h2>{{nombre}}</h2>
+                    <p>Precio: ${{precio}}</p>
+                    {{#if destacado}}
+                    <strong>Producto Destacado</strong>
+                    {{/if}}
+                    <a href="/products/{{id}}">Ver Detalle</a>
+                </article>
+            {{/each}}
+        </section>
+    </main>
+    {{> footer}}
+
+</body>
+</html>
